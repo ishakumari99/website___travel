@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+
+
+    }
+
+    /* #navbar {
+      height: 60px;
+      background-color: #0f1111;
+      margin: 0 auto;
+      padding: 20px;
+      color: white
+    }
+
+    #logo {
+      background-color: #f08804;
+      font-size: 20px;
+    }
+
+    a {
+      margin-right: 110px;
+      ;
+      font-size: 20px;
+    }
+
+    nav {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0f1111;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      min-width: 160px;
+    }
+
+    .dropdown-content a {
+      color: #f9f1f1;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }*/
+
+    /* Section Styles */
+    section {
+      margin-top: 40px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Destination Styles */
+    .destination {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .destination-item {
+      width: 30%;
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .destination-item img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .destination-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .destination-item p {
+      font-size: 16px;
+    }
+
+    /* Time Table Styles */
+    .time-table {
+      margin-top: 40px;
+    }
+
+    .time-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .time-table th,
+    .time-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .time-table th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .container .prices {
+      height: 200px;
+      width: 200px;
+
+    }
+
+    .prices {
+      margin-top: 40px;
+    }
+
+    .prices ul {
+      list-style-type: none;
+    }
+
+    .prices ul li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .container form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .container form input[type="email"] {
+      width: 300px;
+      height: 40px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+
+    .container form button[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .container form button[type="submit"]:hover {
+      background-color: #444;
+    }
+
+    /*button {
+      background-color: #f08804;
+    }*/
+
+    @media screen and (max-width: 768px) {
+      #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+      }
+
+      #navbar a {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .dropdown {
+        margin-bottom: 10px;
+      }
+
+      .container form input[type="email"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Travel Agency</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="1.html">Destinations</a> </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="time.html">Time Table</a> </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="prices.html">Prices</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Booking</a></li>
+              <li><a class="dropdown-item" href="#">Review</a></li>
+              <li><a class="dropdown-item" href="#">Payment</a></li>
+            </ul>
+          </li>
+        </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section class="container">
+    <h2>Welcome to Our Travel Agency</h2>
+    <div class="destination">
+      <div class="destination-item">
+        <img src="1.jpg" alt="Paris" width="420px" height="320px">
+        <h3>Paris</h3>
+        <p>Paris, France</p>
+        <p>Explore the city of love and fashion.</p>
+      </div>
+
+      <div class="destination-item">
+        <img src="2.jpeg" alt="New York" width="420px" height="320px">
+        <h3>New York</h3>
+        <p>New York, USA</p>
+        <p>Visit the city that never sleeps.</p>
+      </div>
+      <div class="destination-item">
+        <img src="3.jpeg" alt="Tokyo" width="420px" height="320px">
+        <h3>Tokyo</h3>
+        <p>Tokyo, Japan</p>
+        <p>Discover the land of the rising sun.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Time Table Section -->
+  <section class="container time-table">
+    <h2>Time Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Departure</th>
+          <th>Return</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paris, France</td>
+          <td>May 10, 2023</td>
+          <td>May 20, 2023</td>
+        </tr>
+        <tr>
+          <td>New York, USA</td>
+          <td>June 1, 2023</td>
+          <td>June 10, 2023</td>
+        </tr>
+        <tr>
+          <td>Tokyo, Japan</td>
+          <td>July 1, 2023</td>
+          <td>July 10, 2023</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Prices Section -->
+  <section class="container prices">
+    <h2>Prices</h2>
+    <ul>
+      <li>Paris, France - $2000 per person</li>
+      <li>New York, USA - $2500 per person</li>
+      <li>Tokyo, Japan - $3000 per person</li>
+    </ul>
+  </section>
+  <section class="container">
+    <h2>Sign Up for Updates</h2>
+    <form>
+      <input type="email" placeholder="Enter your email address">
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Travel Agency</p>
+    </div>
+  </footer>
+</body>
+
+</html>

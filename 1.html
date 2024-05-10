@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Destination Styles */
+    .destination-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .destination-item {
+      width: calc(33.33% - 20px);
+      /* Adjust the width as needed */
+      margin: 10px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .destination-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .destination-item img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .destination-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .destination-item p {
+      font-size: 16px;
+    }
+
+    *#navbar {
+      height: 60px;
+      background-color:black;
+      margin: 0 auto;
+      padding: 20px;
+      color: black
+    }
+
+    #logo {
+      background-color: #f08804;
+      font-size: 20px;
+    }
+
+    a {
+      margin-right: 110px;
+      ;
+      font-size: 20px;
+    }
+
+    nav {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0f1111;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      min-width: 160px;
+    }
+
+    .dropdown-content a {
+      color: #f9f1f1;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    button {
+      background-color: #f08804;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box: sizing 100px;
+      ;
+    }*/
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Destination Styles */
+    .destination-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .destination-item {
+      width: calc(33.33% - 20px);
+      /* Adjust the width as needed */
+      margin: 10px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .destination-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .destination-item img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .destination-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .destination-item p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Travel Agency</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="1.html">Destinations</a> </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="time.html">Time Table</a> </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="prices.html">Prices</a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Booking</a></li>
+              <li><a class="dropdown-item" href="#">Review</a></li>
+              <li><a class="dropdown-item" href="#">Payment</a></li>
+            </ul>
+          </li>
+        </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="destination-container">
+    <div class="destination-item">
+      <img src="6.jpeg" alt="Paris" width="350px" height="220px">
+      <h3>Amritsar</h3>
+      <p>Amritsar, panjab</p>
+      <p>Explore the city of river and gurudwara.</p>
+
+    </div>
+
+    <div class="destination-item">
+      <img src="2.jpeg" alt="New York" width="350px" height="220px">
+      <h3>New York</h3>
+      <p>New York, USA</p>
+      <p>Visit the city that never sleeps.</p>
+    </div>
+
+    <div class="destination-item">
+      <img src="4.jpeg" alt="Tokyo" width="350px" height="220px">
+      <h3>Taj mahal</h3>
+      <p>Taj mahal, uttarpradesh</p>
+      <p>Discover the land of the god.</p>
+    </div>
+
+    <div class="destination-item">
+      <img src="3.jpeg" alt="London" width="350px" height="220px">
+      <h3>London</h3>
+      <p>London, UK</p>
+      <p>Explore the rich history and culture.</p>
+    </div>
+
+    <div class="destination-item">
+      <img src="5.jpeg" alt="Rome" width="350px" height="220px">
+      <h3>Red fort</h3>
+      <p>Red fort, delhi </p>
+      <p>capital of India .</p>
+    </div>
+
+    <div class="destination-item">
+      <img src="1.jpg" alt="Dubai" width="350px" height="220px">
+      <h3>Paris</h3>
+      <p>Paris, France</p>
+      <p>Explore the city of love and fashion.</p>
+    </div>
+  </div>
+</body>
+
+</html>
